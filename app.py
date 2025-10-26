@@ -15,9 +15,9 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-model = joblib.load('pickled_model_files/knn_heart_disease.pkl')
-scaler = joblib.load('pickled_model_files/scaler_heart_disease.pkl')
-columns = joblib.load('pickled_model_files/columns_heart_disease.pkl') 
+model = joblib.load('knn_heart_disease.pkl')
+scaler = joblib.load('scaler_heart_disease.pkl')
+columns = joblib.load('columns_heart_disease.pkl') 
 
 st.title("Heart Stroke Prediction App")
 st.markdown("This app predicts whether a person is likely to have a heart stroke or not.")
@@ -66,5 +66,6 @@ if st.button("Predict"):
         st.error("The model predicts that the person is likely to have a heart stroke.")
     else:
         st.success("The model predicts that the person is unlikely to have a heart stroke.")
+
 
 
